@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="icon" type="image/x-icon" href="../Assests/logos.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/signup.css">
+        <script>
+            function validateForm() {
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirm-password').value;
+                const errorMessage = document.getElementById('error-message');
+            
+                if (password !== confirmPassword) {
+                    errorMessage.textContent = "Passwords do not match.";
+                    return false;  // Prevents form submission if passwords don't match
+                }
+    
+                errorMessage.textContent = "";  // Clear error message
+                alert("Signup successful!");
+                window.location.href = "../Pages/login.html";  // Redirects to the login page
+                return false;  // Prevents actual form submission to allow the redirect
+            }
+        </script>  
+</head>
+<body>
+    <header style="background-color: rgb(46, 37, 37); height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div style="color: rgb(224, 36, 36); font-size: 40px; font-weight: bold;">
+            IᑎᑎOᖴEᔕT
+        </div>
+        <div style="color: white; padding-right: 30px;">
+            <a style="text-decoration: none; color: white;" href="../index.html">
+                <img style="height: 40px; width: 40px;" src="../Assests/homelogo-removebg-preview.png">
+            </a>
+        </div>
+    </header> 
+
+    <!-- Signup Form -->
+    <section class="signup-section">
+        <h2>Signup</h2>
+        <form id="signupForm" onsubmit="return validateForm()">
+            <label for="name">Full Name:</label>
+            <input style="width:95%" type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="email">Email:</label>
+            <input style="width:95%" type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="password">Password:</label>
+            <input style="width:95%" type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input style="width:95%" type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <p id="error-message"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: white;">&copy; 2024 InnoFest. All rights reserved.</p>
+    </footer>
+</body>
+</html>

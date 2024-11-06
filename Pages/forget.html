@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image:url("../Assests/newlog.jpg");
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .forgot-password-container {
+            width: 400px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto; /* Center container */
+            margin-top: 100px; /* Space from the top */
+            flex-grow: 0.5px; /* Allow the container to grow */
+        }
+        footer {
+            background-color: rgb(46, 37, 37);
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: rgb(46, 37, 37); height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+        <div style="color: rgb(224, 36, 36); font-size: 40px; font-weight: bold;">
+            IᑎᑎOᖴEᔕT
+        </div>
+        <div style="color: white; padding-right: 30px;">
+            <a style="text-decoration: none; color:white;" href="../index.html">
+                <img style="height:40px; width:40px;" src="../Assests/homelogo-removebg-preview.png" alt="Home">
+            </a>
+        </div>
+    </header> 
+    <div class="forgot-password-container">
+        <h2 class="text-center">Forgot Password</h2>
+        <br>
+        <form id="forgotPasswordForm" onsubmit="return validateForgotPasswordForm()">
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" class="form-control" id="newPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" required>
+            </div>
+            <p id="error-message" style="color: red;"></p>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateForgotPasswordForm() {
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('error-message');
+        
+            // Validate that passwords match
+            if (newPassword !== confirmPassword) {
+                errorMessage.textContent = "Passwords do not match.";
+                return false;  // Prevent form submission if passwords don't match
+            }
+
+            errorMessage.textContent = "";  // Clear any error messages
+            alert("Password reset successful!");
+            window.location.href = "../Pages/login.html";  // Redirect to login page
+            return false;  // Prevent actual form submission to allow the redirect
+        }
+    </script>
+        <div id="message" class="mt-3"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Handle forgot password form submission
+        document.getElementById('forgotPasswordForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            const email = document.getElementById('email').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const messageDiv = document.getElementById('message');
+
+            // Clear previous messages
+            messageDiv.innerHTML = '';
+
+            // Validate passwords
+            if (newPassword !== confirmPassword) {
+                messageDiv.innerHTML = '<div class="alert alert-danger" role="alert">Passwords do not match.</div>';
+                return;
+            }
+
+            // Simulate resetting the password
+            if (email && newPassword) {
+                messageDiv.innerHTML = '<div class="alert alert-success" role="alert">Your password has been reset successfully!</div>';
+                // Here you can add logic to send the email and new password to your backend
+            } else {
+                messageDiv.innerHTML = '<div class="alert alert-danger" role="alert">Please fill in all fields.</div>';
+            }
+        });
+    </script>
+     <footer>
+        <p style="color: white;">&copy; 2024 InnoFest. All rights reserved.</p>
+    </footer>  
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details for Booking</title>
+    <link rel="icon" type="image/x-icon" href="../Assests/logos.png">
+    <link rel="stylesheet" href="../CSS/registerform.css">
+</head>
+<body>
+    <header style="background-color: rgb(46, 37, 37); height:65px;display: flex; justify-content: space-between; align-items: center; padding: 0 20  vvv   px;">
+        <div style="color: rgb(224, 36, 36); font-size: 40px; font-weight: bold;padding-left: 20px;">
+            IᑎᑎOᖴEᔕT
+        </div>
+        <div style="color: white;padding-left: 900px;padding-right: 30px;"><a style="text-decoration: none;color:white" href="../index.html"><img style="height:40px;width:40px;"src="../Assests/homelogo-removebg-preview.png"><br></a></div>
+    </header> 
+    <div class="container">
+        <h1>Register Form</h1>
+        <form action="/submit-booking" method="POST">
+            <div class="form-group">
+                <label for="name">Username:<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Full Name">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="phone">Phone Number:<span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required placeholder="Phone Number">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="shop">Select Shop:<span class="required">*</span></label>
+                <select id="shop" name="shop" required placeholder="Select Shop">
+                    <option value="textiles">ArtWorks</option>
+                    <option value="art-installation">Pottery</option>
+                    <option value="pottery-class">Books</option>
+                    <option value="art-installation">FoodCourt</option>
+                    <option value="pottery-class">Handlooms</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="date">Choose Dates:<span class="required">*</span></label>
+                <select id="shop" name="shop" required placeholder="Choose Date">
+                    <option value="November 15">November 15</option>
+                    <option value="November 16">November 16</option>
+                    <option value="November 17">November 17</option>
+                    <option value="November 18">November 18</option>
+                    <option value="November 19">November 19</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="message">Additional Information:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <br>
+            <button type="submit"><a href="../Pages/payment1.html" style="text-decoration: none;font-size: 20px;">Proceed</a></button>
+            
+        </form>
+    </div>
+    <footer>
+        <p style="color: white;">&copy; 2024 InnoFest. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

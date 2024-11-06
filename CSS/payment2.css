@@ -1,0 +1,28 @@
+
+body {
+    background-image:url("../Assests/newlog.jpg");
+    height:100%;
+}
+footer {
+    background-color: rgb(46, 37, 37);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px; /* Push the footer to the bottom */
+    width: 100%;
+}
+.payment-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+.form-control.is-valid {
+    border-color: #28a745;
+}
+.required{
+    color: red;
+}

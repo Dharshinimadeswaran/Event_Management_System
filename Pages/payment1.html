@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibition Shop Booking Payment Form</title>
+    <link rel="icon" type="image/x-icon" href="../Assests/logos.png">
+    <link rel="stylesheet" href="../CSS/payment1.css">
+</head>
+<body>
+    <header style=" background-color: rgb(46, 37, 37);height: 100px; display: flex; justify-content: space-between; align-items: center; padding: 0 20  vvv   px;">
+        <div style="color: rgb(224, 36, 36); font-size: 40px; font-weight: bold;padding-left: 20px;">
+            IᑎᑎOᖴEᔕT
+        </div>
+        <div style="color: white;padding-left: 900px;padding-right: 30px;"><a style="text-decoration: none;color:white" href="../index.html"><img style="height:40px;width:40px;"src="../Assests/homelogo-removebg-preview.png"><br></a></div>
+    </header> 
+    
+        <div class="container">
+            <h1 style="text-align: center;">Payment Form</h1>
+            <br>
+            <form id="paymentForm" action="../Pages/payment2.html" method="post">
+                <div class="section">
+                    <label for="shopName">Shop Name:<span class="required">*</span></label>
+                    <input type="text" id="shopName" name="shopName" required>
+                </div>
+    
+                <div class="section">
+                    <label for="ownerName">Owner's Name:<span class="required">*</span></label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+    
+                <div class="section">
+                    <label for="category">Category:<span class="required">*</span></label>
+                    <select id="category" name="category" required>
+                        <option value="handlooms">Handlooms</option>
+                        <option value="potteries">Potteries</option>
+                        <option value="paintart">PaintArt</option>
+                        <option value="foodcourt">Food Court</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="bookpage">Book Page</option>
+                    </select>
+                </div>
+    
+                <div class="section">
+                    <label for="contact">Contact Number:<span class="required">*</span></label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+    
+                <div class="section">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+    
+                <div class="section">
+                    <label for="days">Number of Days for Booking:<span class="required">*</span></label>
+                    <input type="number" id="days" name="days" required>
+                </div>
+    
+                <div class="section">
+                    <label for="requirements">Additional Requirements:</label>
+                    <textarea id="requirements" name="requirements" rows="3"></textarea>
+                </div>
+    
+                <div class="section">
+                    <label for="fee">Booking Fee (per day):<span class="required">*</span></label>
+                    <select id="fee" name="fee" required>
+                        <option value="100">Handlooms - ₹100</option>
+                        <option value="150">Potteries - ₹150</option>
+                        <option value="120">PaintArt - ₹120</option>
+                        <option value="200">Food Court - ₹200</option>
+                        <option value="80">Accessories - ₹80</option>
+                        <option value="60">Book Page - ₹60</option>
+                    </select>
+                </div>
+    
+                <button type="submit" style="font-size: 20px;">Proceed</button>
+            </form>
+        </div>
+        <script>
+            document.getElementById('paymentForm').onsubmit = function(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                // Custom validation (if needed)
+                const shopName = document.getElementById('shopName').value;
+                const ownerName = document.getElementById('ownerName').value;
+                const contact = document.getElementById('contact').value;
+                const days = document.getElementById('days').value;
+                
+                if (!shopName || !ownerName || !contact || !days) {
+                    alert("Please fill out all required fields.");
+                    return;
+                }
+                
+                // Additional validation example: Check if the contact number is valid
+                if (!/^\d{10}$/.test(contact)) {
+                    alert("Please enter a valid 10-digit contact number.");
+                    return;
+                }
+    
+                // If all validations pass, proceed to the next page
+                alert("Form submitted successfully!");
+                window.location.href = "../Pages/payment2.html";
+            };
+        </script>   
+    <footer>
+        <p style="color: white;">&copy; 2024 InnoFest. All rights reserved.</p>
+    </footer>
+</body>
+</html>

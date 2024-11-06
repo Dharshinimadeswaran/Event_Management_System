@@ -1,0 +1,358 @@
+
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex-container{
+    display: flex;
+    background-image: url('../Assests/leg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:900px;
+    font-size: 50px;
+}
+.flex-contain{
+    display:flex;
+    width: 100%;
+    height: 80px;
+    background-color:rgb(31,5,5);
+    position: fixed;
+    padding-bottom: 10px;
+    
+}
+.flex-items a {
+    color: rgb(255, 252, 252);
+}
+a:hover {
+    color: rgb(138, 136, 138); 
+}
+a:active {
+    color: green; /* Set the color for active links */
+}
+
+.flex-items{
+   padding: 20px;
+   color: rgb(100, 27, 27);
+   float:right;
+   justify-content: center;
+}
+h1{
+    text-align: center;
+}
+p{
+    text-align: left;
+    font-size: 25px;
+    color: rgb(12, 9, 9);
+    padding-bottom: 50px;
+}
+.flex-base{
+    display: flex;
+}
+.section{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 100vh;
+}
+.container{
+    width:80%;
+    display:block;
+    margin: auto;
+    padding-top: 100px;
+    background-color: rgb(214, 17, 17);
+}
+.content h3{
+    color: rgb(184, 23, 23);
+} 
+.content-section{
+    float:left;
+    width: 55%;
+
+}
+.image-section{
+    float: right;
+    width:40%;
+
+}
+.image-section img{
+    width: 500px;
+    height: 500px;
+}
+.content-section.title{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.content-section.content h3{
+    margin-top: 20px;
+    color:#5d5d5d;
+    font-size: 30px;
+}
+.content-section.content p{
+    margin-top: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+
+}
+@media screen and (max-width: 768px) {
+    .container{
+        width: 80%;
+        display:block;
+        margin:auto;
+        padding-top: 50px;
+
+    }
+    .content-section{
+        float:none;
+        width: 55%;
+        display:block;
+        margin: auto;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flexing a {
+    text-decoration: none;
+    color: black;
+}
+
+.flexing a:hover {
+    color: rgb(58, 212, 84);
+}
+.contain {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.event {
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+}
+
+.event h2 {
+    color: #0a0a0a;
+}
+
+.event p {
+    color: #555;
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+a{
+    text-decoration: none;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:white;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 40px auto;
+    display: flex; 
+    align-items: center;
+    background-color: rgb(246, 241, 241);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.text {
+    flex: 1;
+    margin-right: 20px; 
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    margin: 15px 0;
+}
+
+img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 10px; 
+}
+.hr-container {
+    display: flex;
+    align-items: center;; /* Center the text vertically */
+    text-align: center; /* Center the text horizontally */
+}
+
+hr {
+    flex: 1; 
+    border: none; 
+    border-top: 1px solid #000;
+    margin: 0; 
+}
+
+span {
+    padding: 0 10px;
+    font-size:50px;
+    font-weight: bold; 
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container {
+    flex: 1; 
+}
+
+.footer {
+    background-color: rgb(46, 37, 37);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px; 
+    max-width: 1200px; 
+    border-radius: 2px;
+    transition: transform 0.3s;
+    color: #fafaff;
+}
+.grid-container :hover{
+    transform: translateY(-10px);
+}
+.grid-item {
+    width:350px;
+    background: rgb(238, 238, 238);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    padding: 9px; 
+    border-radius: 5px;
+    text-align: center; 
+  
+} 
+.grid-item img {
+    width: 150%;
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.logo-container img {
+    padding: 7px;
+    margin-right: 20px;
+    height: 100px;
+    width: auto;
+}
+
+.font {
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color:#faf9f9
+}
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+.feedback {
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.feedback textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(225, 224, 224);
+}
+
+.feedback button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #7970b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+.container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    background: rgb(246, 221, 221);
+    padding: 20px;
+    border-radius: 8px;
+    width:100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+  
